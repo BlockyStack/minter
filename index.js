@@ -19,6 +19,6 @@ async function main() {
     fs.writeFileSync(`./colorIndex.json`, i);
     await erc721["ownerMint"](colors[i], `https://raw.githubusercontent.com/oasis-stack/stack/main/json/${colors[i]}.json`);
     console.log("minted", colors[i]);
-    await new Promise((resolve) => setTimeout(resolve, 15000));
+    await new Promise((resolve) => setTimeout(resolve, 20000));
   }
 }
