@@ -7,7 +7,7 @@ npm install
 
 mv .env.example .env
 
-add private key to .env
+vim .env
 
 node index.js
 ```
