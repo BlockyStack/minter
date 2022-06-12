@@ -17,7 +17,7 @@ async function main() {
   const erc721 = new ethers.Contract(contract, abi, wallet);
   for (let i = colorIndex; i < colors.length; i++) {
     fs.writeFileSync(`./colorIndex.json`, i);
-    await erc721["ownerMint"](colors[i], `https://raw.githubusercontent.com/oasis-stack/stack/main/json/${colors[i]}.json`);
+    await erc721["ownerMint"](colors[i], `https://raw.githubusercontent.com/oasis-stack/data/main/json/${colors[i]}.json`);
     console.log("minted", colors[i]);
     await new Promise((resolve) => setTimeout(resolve, 20000));
   }
